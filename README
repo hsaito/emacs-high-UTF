@@ -1,0 +1,23 @@
+UTF-64, UTF-128, UTF-256, UTF-384, UTF-512 Support for Emacs
+
+* Warning
+THIS IS A JOKE SCRIPTS. It can cause data loss. Back up your data before playing with this.
+
+* Is This Useful?
+Probably not. Resulting files won't be useful as they are not supported by other programs anywhere else.
+
+* Contents
+This set of Emacs Lisp scripts adds support of the following encodings.
+
+- UTF-64
+- UTF-128
+- UTF-256
+- UTF-384
+- UTF-512
+
+* How to Install
+1. Place the package in one of your load-path 
+2. (OPTIONAL) Navigate to it using dired, select High-UTF-COMPILE and enter L and load the script. It'll byte-compile the distribution.
+3. Add the following to your Emacs initialization file.
+
+(load-library "High_UTF_Loader.el")

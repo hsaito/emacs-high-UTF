@@ -1,0 +1,18 @@
+;; -*- coding: utf-8; mode: emacs-lisp; lexical-binding: t -*-
+
+(setq High-UTF-files-to-compile (directory-files "."))
+
+(while High-UTF-files-to-compile
+  (if (string-match ".$*.el$" (car High-UTF-files-to-compile))
+    (progn
+     (byte-compile-file (car High-UTF-files-to-compile))
+     )
+      (message "Compiled!")
+      )
+     (setq High-UTF-files-to-compile (cdr High-UTF-files-to-compile))
+     (message (car High-UTF-files-to-compile))
+     )
+
+;; Lastly compiled High_UTF_Loader as it can fail if this is first
+;; time compiling.
+(byte-compile "High_UTF_Loader.el")
